@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body>
+    <section class="min-h-[100vh] bg-[#1B173A] flex items-center justify-center">
+        <div class="max-w-[180px] rounded-lg bg-[#2B2A4C] border-2 border-white">
+            <div class="flex items-center justify-between min-w-[180px] px-[10px] py-1">
+                <div class="flex items-center gap-[10px]">
+                    <span><img src="./assets/img/png/calander_img.png" alt="calander_img"></span>
+                    <div>
+                        <h3 class="text-white font-light text-xs  font-ffPoppins">Check-in</h3>
+                        <h2 class="text-white font-light text-base font-ffPoppins changingDate" id="currentDate">Jun 29
+                        </h2>
+                    </div>
+                </div>
+                <div>
+                    <img src="./assets/img/png/top_side_icon.png" alt="top" class="mb-1 cursor-pointer increaseDate" onclick="increment()">
+                    <img src="./assets/img/png/bottom_side_icon.png" alt="bottom"
+                        class="mt-1 cursor-pointer decreaseDate" onclick="decrement()">
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
