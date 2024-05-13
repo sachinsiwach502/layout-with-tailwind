@@ -1,30 +1,27 @@
-let current = new Date(2024, 5, 29);
 
+
+// Define the initial date
+let currentDate = new Date(2024, 5, 29); // June 29, 2024
+
+// Function to update the date display
 function updateDate() {
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    let date = current.getDate();
-    let month = months[current.getMonth()];
-    document.getElementById("currentDate").textContent = `${month} ${date}`;
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const month = months[currentDate.getMonth()];
+    const day = currentDate.getDate();
+    document.getElementById('currentDate').innerText = `${month} ${day}`;
 }
 
+// Function to increment the date
 function increment() {
-    current.setDate(current.getDate() + 1);
-    handleChange();
-}
-function decrement() {
-    current.setDate(current.getDate() - 1);
-    handleChange();
-}
-
-function handleChange() {
-    if (current.getDate > 31) {
-        current.setDate(1);
-        current.setMonth(current.getMonth() + 1);
-    } else if (current.getDate() < 1) {
-        current.setDate(30);
-        current.setMonth(current.getMonth() - 1);
-    }
+    currentDate.setDate(currentDate.getDate() + 1);
     updateDate();
 }
 
+// Function to decrement the date
+function decrement() {
+    currentDate.setDate(currentDate.getDate() - 1);
+    updateDate();
+}
+
+// Call updateDate initially to display the initial date
 updateDate();
